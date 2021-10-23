@@ -79,17 +79,7 @@ const login = async (req, res) => {
 }
 
 
-const currentUser = async (req, res) => {
-    try {
-        const user = await User.findById(req._id).select("-password").exec();
-        return res.json({ ok: true });
-    } catch (error) {
-        console.log(error);
-    }
-}
-
 module.exports = {
     register,
-    login,
-    currentUser
+    login
 }
