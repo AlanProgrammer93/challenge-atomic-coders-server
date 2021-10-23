@@ -2,7 +2,6 @@ const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const { generateJWT } = require('../utils/jwt');
 
-
 const register = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -77,7 +76,6 @@ const login = async (req, res) => {
         });
     }
 }
-
 
 module.exports = {
     register,
